@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Futeboll</title>
+</head>
+<body>
+    <div id="campo">
+
+        <!-- Area da direita -->
+        <div id="linhaTeste"> </div> 
+        <div id="area"> 
+            <div id="pequenaArea"></div>
+        </div>
+        
+        <!-- Area da esquerda -->
+        <div id="linhaTesteEsquerda"> </div> 
+        <div id="areaEsquerda"> 
+            <div id="pequenaAreaEsquerda"></div>
+        </div>
+
+        <!-- Meio de campo -->
+        <div id="linhaMeio">
+            <div id="meiuca"></div>
+            <div id="bolaMeioDeCampo"></div>
+        </div>
+
+        <canvas id="player"></canvas>
+    </div>
+</body>
+<script>
+
+let x = 0
+let y = 0
+
+function movePlayer(){
+    window.addEventListener("keypress", function(event){
+        let tecla = event.keyCode
+        //  this.alert(tecla)
+        if(tecla == '100'){ // D
+            x =  x + 10
+            document.getElementById("player").style.left = x + "px" 
+        } 
+        if(tecla == '97'){ // A
+            x =  x - 10
+            document.getElementById("player").style.left = x + "px" 
+        } 
+        
+        if(tecla == '119'){ // W
+            y =  y - 10
+            document.getElementById("player").style.top = y + "px" 
+        }
+        if(tecla == '115'){ // S
+            y =  y + 10
+            document.getElementById("player").style.top = y + "px" 
+        }
+
+       
+    })
+
+}
+movePlayer()
+
+
+  console.log(player)
+
+</script>
+</html>
